@@ -1,0 +1,304 @@
+:root{
+    --fuenteHeading: 'Fredericka the Great', cursive;
+    --fuentePrincipal: 'Cormorant Upright', serif;
+    --fuenteParrafos: 'Carter One', cursive;
+    --fuenteTexto: 'Zen Old Mincho', serif;
+    --fuenteAlternativa: 'Corben', cursive;
+    --fuentePrueba: 'Shadows Into Light', cursive;
+    --fuentePrueba2:'Sedgwick Ave Display', cursive;
+
+    --Primario: ;
+    --Secundario: ;
+    --Azul: ;
+    --Blanco: #fff;
+    --Negro: #000;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+/* <!--Paul Irish para el sizing box, para que el padding no genere problemas--> */
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+
+}
+
+p{
+    font-size: 2rem;
+    color: var(--Negro);
+}
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+h1,h2,h3 {
+    margin: 0 0 5rem 0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size:3.6rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/** Header **/
+.webp .header {
+    background-image: url(../img/FondoHeader.webp);
+}
+.no-webp .header {
+    background-image: url(../img/FondoHeader.jpg);
+}
+.header{
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-around; */
+	/* align-items: center; */
+	/* text-align: center; */
+    /* position: fixed; */
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 2rem;
+    }
+.logo__bold{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-family: var(--fuenteHeading);
+    text-align: center;
+    font-size: 13rem;
+    color: #d8d5f1;
+    font-weight: bold;
+	animation: azul-neon 2s infinite alternate;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .logo__bold{
+        font-size: 17rem;
+    }
+}
+.navegacion{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    gap: 2rem;
+    /* margin-top: 2rem; */
+}
+.navegacion__enlace{
+    /* display: block; */
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--Blanco);
+}
+.navegacion__enlace:hover{
+    text-shadow: 9px 9px 18px #ff7f7f, 
+    3px 3px 5px #f81818, 
+    -3px -3px 5px #f81818, 
+    -9px -9px 27px #ff7f7f;
+    text-transform: uppercase;
+    font-size: 3.4rem;
+    transition-duration: 0.5s;
+    color: var(--Blanco);
+}
+@keyframes azul-neon {
+	0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+		text-shadow: 9px 9px 18px #3485ff, 
+					3px 3px 5px #00246c, 
+					-3px -3px 5px #00246c, 
+					-9px -9px 27px #3485ff;
+	}
+	10%, 15%, 60% {
+		text-shadow: none;
+	}
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 760px) {
+    .navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+}
+.header__texto{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-family: var(--fuentePrueba2);
+    font-size: 5rem;
+    text-align: right;
+    color: var(--Blanco);
+    text-align: center;
+    color: #a81b1b;
+    text-shadow: 3px 3px 3px #ffffff, 
+    1px 1px 3px #fff, 
+    -1px -1px 3px #fff, 
+    -3px -3px 3px #fff;
+    transform: rotate(-25deg);
+}
+.span{
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: #000;
+}
+.proyectos{
+    height: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 5px 15px -1px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px -1px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px -1px rgba(112,112,112,1);
+    background-color: var(--Blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.encabezado-proyecto{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+.w-100{
+    height: 45rem;
+}
+.carousel{
+    border: 1px solid #000;
+}
+.carousel-caption{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: rgba(20, 20, 20, 0.5);
+    width: 3rem;
+    height: 8rem;
+}
+.d-none h5{
+    font: bold;
+    font-size: 1.7rem;
+}
+.d-none p{
+    font: bold;
+    font-size: 2.4rem;
+}
+.encabezado-form{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.navegacion,
+.proyecto,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.formulario{
+    background-color: #757575;
+    width: min(60rem, 100%);/** utilizar el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none;
+}
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 10rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1 / 3; /*para modificar el orden de las columnas. Grid-row modifica las filas*/
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--Blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea{
+    height: 10rem;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+.boton {
+    background-color: #0097a7;
+    color: var(--Blanco);
+    padding: 1rem 3rem;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+        margin-top: 5rem;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+/* Footer */
+.footer{
+    text-align: center;
+    padding: 1.5rem 0 0.5rem 0;
+}

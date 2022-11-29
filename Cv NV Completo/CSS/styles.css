@@ -214,12 +214,12 @@ h3{
     margin-bottom: 3rem;
 }
 
-.navegacion,
+/* .navegacion,
 .proyecto,
 .formulario{
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+} */
 .formulario{
     background-color: #757575;
     width: min(60rem, 100%);/** utilizar el valor mas pequeño*/
